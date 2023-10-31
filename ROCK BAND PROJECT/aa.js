@@ -8,7 +8,7 @@ $(document).ready(function () {
     const idPrefix = 'song';
     const trackFinderPrefix = 'trackFound2';
     const songName = [];
-    const previewUrls = []; // Array to store preview URLs
+    const previewUrls = []; // Array pra guardar preview URLs
     let alreadyPlayingThis = null;
 
     for (let i = 1; i <= numberOfSongs; i++) {
@@ -22,7 +22,7 @@ $(document).ready(function () {
     const clientId = '5edc273a1f224369951898cbad23da55';
     const clientSecret = 'c786bb718b2141aabe74f3d6d381c869';
 
-    // Step 1: Get Spotify Access Token
+    // 1: Pegar Spotify Access Token
     fetch("https://accounts.spotify.com/api/token", {
         method: "POST",
         headers: {
@@ -35,7 +35,7 @@ $(document).ready(function () {
         .then(data => {
             const accessToken = data.access_token;
 
-            // Step 2: Search for the Song on Spotify
+            // 2: Procura a musica no Spotify
             for (let i = 1; i <= numberOfSongs; i++) {
                 const trackID = `${idPrefix}${i.toString().padStart(3, '0')}`;
                 const trackBeforeExtract = document.getElementById(trackID);
@@ -60,7 +60,7 @@ $(document).ready(function () {
 
                         if (trackFound) {
 
-                            // Store the previewUrl for each song
+                            
                            
 
                             songName[i].addEventListener("mouseover", () => {
@@ -76,7 +76,7 @@ $(document).ready(function () {
                                 }
                                 previewUrls[i] = trackFound.preview_url;
                                 
-                                const artistId = trackFound.artists[0].id; // Assuming the first artist in the list
+                                const artistId = trackFound.artists[0].id; // Primeiro artista da lista
                                 
                                 fetch(`https://api.spotify.com/v1/artists/${artistId}`, {
                                     headers: {
@@ -191,7 +191,7 @@ $(document).ready(function () {
                     for (j = 0; j < collectionOfSongs.length - 1; j++) {
                         if (collectionOfSongs[j].innerHTML.toLowerCase() > collectionOfSongs[j + 1].innerHTML.toLowerCase()) {
                             shouldSwitch = true;
-                            break; // You can break when a swap is needed
+                            break; // pode usar break quando um swap eh necessario
                         }
                     }
         
