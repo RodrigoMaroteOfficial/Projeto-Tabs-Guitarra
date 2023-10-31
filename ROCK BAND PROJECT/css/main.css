@@ -1,0 +1,320 @@
+body
+{
+    font-family: 'Heebo', sans-serif;
+    background-color: black;
+	background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    margin: 0; /*remove as margens padrao que vao atrapalhar no que queremos fazer*/
+    padding: 0; /*por hora desnecessario(?)*/
+    overflow: hidden; /*remove o scroll padrao do browser pq vamos usar um customizado no ul (.listOfSongs)*/
+    height: 100%;
+    
+    /*rgb(15, 188, 246);*/
+    
+}
+
+h1
+{
+    z-index: 1; /*quanto maior o numero, maior vai ser o poder dele sobrepor outros elementos */
+    position: sticky; /*faz um header, div e etc (um div nesse caso) ficar preso e nao descer num scroll down*/
+    top: 0; /* necessario pro position sticky funcionar*/
+    
+    background: repeating-linear-gradient(
+    -55deg, /*define o angulo*/
+    #000000,
+    #000000 1px,    /*sinceramente so fui mexendo nessas cores e tamanhos ate achar algo dahora*/
+    #000000 1px,
+    #161616 5px
+  );
+    font-size: 4.25rem;
+    font-weight: 700;
+    margin-top: 0%;
+    padding-left: 4%;
+    color: #DBBA7E; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}    
+    
+h1:after /*obetivo: criar a linha abaixo do h1*/
+{
+    position: absolute;
+    content: '';
+    border-bottom: 7px solid #AC7D45; /*#917b43*/
+    width: 102%;
+    bottom: 13px;
+    left: -1%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    
+    
+}
+
+li
+{
+    z-index: 0;
+    color:white;
+    font-size: 2.10rem;
+    position: relative; /*cria um posicionamento de contexto pro pseudo elemento after*/
+    padding: 4.25px 120px;
+    width: 83.9%;
+    /*se usar o margin-left: 5% pra fazer o nome da musica ir pra direita, o background azul claro do hover fica bugado, pois ele so vai comecar onde comeca o texto. usando o padding ali de 120px ali na horizontal faz com que o hover fique na linha toda.*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+li:after
+{
+    position: absolute; /*ele eh posicionado no bottom left do li pois li:after eh um pseudo elemento*/
+    left: 0;
+    bottom: 0;
+    width: 100%; /* garantir que a borda vai cobrir 100% do elemento li*/ 
+    content: '';
+    border-bottom: 2px solid #0000004b;
+    
+}
+
+small
+{
+    font-style: italic;
+    margin-left: 9px;
+    color: rgba(255, 255, 255, 0.578);
+    font-size: 1.50rem;
+}
+
+.imageDiv
+{
+    z-index: 5; /*com zero, apareceria o efeito da sombra. gosto pessoal*/
+    position: fixed; 
+    top: 5.45em; 
+    right: 0%; /*usar isso ao inves do float: right; pois foi usado o positon: fixed. FLOAT NAO TEM EFEITO EM ELEMENTOS FIXOS, top/left/right/bottom DEVEM SER USADOS.*/ 
+    height: 25em;
+    width: 25em;
+    /*border: 8px solid gray;*/
+    border-top: 2.5mm ridge gray;
+    border-right: 2.5mm ridge gray;
+    border-bottom: 2.5mm ridge gray;
+    border-left: 2.5mm ridge gray;
+    margin-top: 3.65em;    
+    
+}
+
+#divShowsImage
+{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Rock_Band_logo.svg/2560px-Rock_Band_logo.svg.png");
+    background-repeat: no-repeat; /*nao deixa repetir a imagem*/
+    background-size: contain; /* faz um imagem grande caber numa caixa que eh menor*/
+    background-position: center; /* centraliza a imagem*/
+}
+
+.contentOfSong
+{  
+    z-index: 1;
+    height: 17em;
+    width: 26.2em;
+    /*border: 2.5mm ridge gray;
+    border-top: 0mm solid gray;
+    border-bottom: 0.5mm solid red;*/
+    
+    margin-top: 0.225em;
+    position: fixed; 
+    top: 35em; 
+    right: 0%;
+    
+   /* background-color: #381313;
+    box-shadow: 9px 9px 200px #1A1110 inset;*/
+
+background-color: #050E0B;
+/*box-shadow: 9px 9px 200px #020605 inset;*/
+
+
+
+    /*background-color: #280d0d;
+opacity: 1;
+background-image:  linear-gradient(30deg, #391313 12%, transparent 12.5%, transparent 87%, #391313 87.5%, #391313), linear-gradient(150deg, #391313 12%, transparent 12.5%, transparent 87%, #391313 87.5%, #391313), linear-gradient(30deg, #391313 12%, transparent 12.5%, transparent 87%, #391313 87.5%, #391313), linear-gradient(150deg, #391313 12%, transparent 12.5%, transparent 87%, #391313 87.5%, #391313), linear-gradient(60deg, #39131377 25%, transparent 25.5%, transparent 75%, #39131377 75%, #39131377), linear-gradient(60deg, #39131377 25%, transparent 25.5%, transparent 75%, #39131377 75%, #39131377);
+background-size: 28px 49px;
+background-position: 0 0, 0 0, 14px 25px, 14px 25px, 0 0, 14px 25px;*/
+    
+    /*background-color: #391313;*/
+    
+}
+
+h3
+{
+    color: rgba(255, 255, 255, 0.849);
+    font-size: 1.4em;
+    
+    margin: 0;
+}
+
+#albumName
+{
+    background-color: rgb(73, 19, 19);
+    box-shadow: 6px 6px 20px #020605 inset; /*, -6px -0.1px 10px #020605 inset;*/
+    padding: 0.4em;
+    height: 1.602em;
+    text-align:center;
+     /*50px*/
+}
+#albumGenre
+{
+    background-color: rgb(78, 25, 21); /*rgb(118, 45, 21) rgb(94, 31, 21)*/
+    box-shadow: 6px 0.1px 20px #020605 inset; /* -6px -0.1px 10px #020605 inset;*/
+    padding: 0.4em;
+    height: 1.602em;
+    text-align:center;
+}
+#albumYear
+{
+    background-color: rgb(83, 28, 21);
+    box-shadow: 6px 0.1px 20px #020605 inset;
+    padding: 0.4em;
+    height: 1.602em;
+    text-align:center;
+}
+#Guitar
+{
+    background-color: rgb(94, 31, 21);
+    box-shadow: 6px 0.1px 20px #020605 inset;
+    padding: 0.4em;
+    height: 1.602em;
+    text-align:center;
+}
+#Bass
+{
+    background-color: rgb(101, 34, 21);
+    box-shadow: 6px 0.1px 20px #020605 inset;
+    padding: 0.4em;
+    height: 1.602em;
+    text-align:center;
+}
+
+.listOfSongs
+{
+    background-image: linear-gradient(to bottom right, rgb(66, 137, 160), rgb(40, 99, 119), rgb(7, 34, 43), rgb(1, 12, 15));
+    
+    background-attachment: fixed;
+    list-style: none;
+    padding: 0px;
+    
+    margin-right: 26.18em; /*faz a ul terminar exatamente onde comeca a linha esquerda do album, assim o scroll customizado fica do lado esquerdo do album*/ /*TALVEZ ISSO QUEBRE DEPENDENDO DO MONITOR, MUDAR/VER DPS*/
+    overflow-y: auto;
+    
+height: 43.05em;
+    margin-top: 0px; /*faz o espacamento entre o h1 e o ul ser zero, se isso nao tiver, fica uma barra preta entre eles*/
+    /*margin-top: -43.1px;*/
+    
+    position: relative;
+    z-index: 2;
+    box-shadow: 2px 9px 9px rgba(0, 0, 0, 0.5) inset;
+
+}
+
+.bottomLine
+{
+    position: absolute;
+    /*bottom: 10em;*/
+    margin-top: -1em;
+    background: #AC7D45;
+    
+    width: 100%;
+    height: 7px;
+    z-index: 1;
+}
+
+
+.listOfSongs::-webkit-scrollbar { /* o prefixo -webkit- eh necessario para navegadores tipo chrome e safari. O navegador nao vai reconhecer que eu quero mudar o scrollbar se ele estiver faltando. Navegadores por padrao ja tem o scroll, entao isso eh uma modificacao no css especifico do webkit. O prefixo pode variar dependendo do navegador*/ 
+    width: 9px; /*o quao fino vai ser o background do scroll*/ 
+    background: #191D1E; /*cor do background do scroll*/ /*rgb(186, 186, 186)*/
+    border: 1mm double;
+}
+
+.listOfSongs::-webkit-scrollbar-thumb {
+    background: #C4BD9D; /*cor do scroll*/  /*#d35353*/
+    border-radius: 100px; /*deixar ele mais redondo pra dar um ar moderno*/
+}
+
+
+
+.song
+{
+    cursor: pointer;
+    transition: background-color 0.25s; /*cria um efeito de transicao suave*/
+      /*transition: background 0.25s; NAO EXISTE, ent nao da pra usar background com linear gradient pra ter transition*/
+      
+    
+}
+.song:hover {
+   /*background-color: rgb(48, 174, 215); original*/
+
+background-color: #168F9D;
+
+   /*background-image: linear-gradient(0.25turn, #168F9D,  #168F9D);*/
+   
+    font-weight: 700;
+}
+
+
+/*.sortingBox
+{
+    z-index: 1; 
+    margin-top: 0;
+    background-image: url("../img/wildtextures-clean-plywood-plate.jpg"); /*usar o ".." pra voltar pra pasta anterior, pois estamos na pasta css e queremos voltar. "../../img/arquivo.jpg" volta duas vezes*/ 
+    /*background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    filter:brightness(35%)  contrast(175%) blur(1.3px); /*35 185*/
+    /*position: fixed; 
+    top: 5.45em; 
+    height: 3em;
+    width: 100%;
+    padding: 4.25px 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.sortingText
+{
+    
+    color: #edd6ab; 
+    
+}*/
+
+.sortingBox {
+    z-index: 5;
+    margin-top: 0em; /*nao faz nada(?)*/
+    position: fixed;
+    top: 5.41em;
+    height: 3em;
+    width: 100%;
+    padding: 0.660em 85px; /*padding: 0.317em 120px;*/
+    
+}
+
+.sortingBox::before {
+    content: '';
+    background-image: url("../img/wildtextures-clean-plywood-plate.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    filter: brightness(35%) contrast(175%) blur(1.3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 86.5%;
+    z-index: -1; /*-1*/
+    box-shadow: 6px 9px 15px rgba(0, 0, 0, 0.5) inset;
+}
+
+#sortingText {
+    color: #edd6abb5;
+    padding-bottom: 0.5em;
+    
+}
+
+#theIcon
+{
+    max-width: 12%;
+    padding-left: 0.6em;
+    padding-top: -50px;
+    
+
+}

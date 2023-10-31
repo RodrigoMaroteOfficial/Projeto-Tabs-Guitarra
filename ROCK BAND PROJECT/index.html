@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETLIST</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--JQuery tem que vir antes do arquivo JS em si-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link href="css/main.css" rel="stylesheet">
+
+<script src="aa.js"></script>
+</head>
+
+
+<body>
+
+    <h1>BIBLIOTECA DE MÚSICAS</h1>
+
+    <div class="sortingBox">
+        <small class="sortingText" id="sortingText">100 Músicas Ordenadas por Nome</small>
+    </div>
+
+    <div id="divShowsImage" class="imageDiv"></div>
+
+    <div class="contentOfSong">
+        <h3 id="albumName"></h3>
+        <h3 id="albumGenre"></h3>
+        <h3 id="albumYear"></h3>
+       <h3 id="Guitar"><!--<img src="img/pngegg.png"> id="theIcon">!--> PlaceHolder Text</h3> 
+       <h3 id="Bass" >PlaceHolder Text</h3>
+    </div>
+
+    
+    
+    <ul class="listOfSongs">
+        <li id="song099" class="song">Breakaway<small>Kelly Clarkson</small></li>  
+  <li id="song001" class="song">Dead End Friends<small>Them Crooked Vultures</small></li>
+  <li id="song002" class="song">Africa<small>Toto</small></li>
+  <li id="song003" class="song">I Hate Myself for Loving You<small>Joan Jett and the Blackhearts</small></li>
+  <li id="song004" class="song">All the Small Things<small>Blink-182</small></li>
+  <li id="song005" class="song">Amaranth<small>Nightwish</small></li>
+ 
+  
+  <li id="song006" class="song">Animal<small>Neon Trees</small></li>
+  <li id="song007" class="song">Awake<small>Godsmack</small></li>
+  <li id="song008" class="song">Better<small>Guns N' Roses</small></li>
+  <li id="song009" class="song">Break On Through (To the Other Side)<small>The Doors</small></li>
+  <li id="song010" class="song">Hysteria<small>Muse</small></li>
+  <li id="song011" class="song">Billie Jean<small>Michael Jackson</small></li>
+  <li id="song012" class="song">Chandelier<small>Sia</small></li>
+
+  <li id="song013" class="song">Cold as Ice<small>Foreigner</small></li>
+  <li id="song014" class="song">Combat Baby<small>Metric</small></li>
+  <li id="song015" class="song">Creep<small>Radiohead</small></li>
+  <li id="song016" class="song">Dani California<small>Red Hot Chili Peppers</small></li>
+  <li id="song017" class="song">Dead on Arrival<small>Fall Out Boy</small></li>
+  <li id="song018" class="song">Drain You<small>Nirvana</small></li>
+
+  <li id="song019" class="song">Dream On<small>Aerosmith</small></li>
+  <li id="song020" class="song">Everybody Wants to Rule the World<small>Tears For Fears</small></li>
+  <li id="song021" class="song">Arabella<small>Arctic Monkeys</small></li>
+  <li id="song022" class="song">Fly Like an Eagle<small>Steve Miller Band</small></li>
+  <li id="song023" class="song">Free Bird<small>Lynyrd Skynyrd</small></li>
+  <li id="song024" class="song">Freedom<small>Jimi Hendrix</small></li>
+  <li id="song025" class="song">Go with the Flow<small>Queens of the Stone Age</small></li>
+  <li id="song026" class="song">Go Your Own Way<small>Fleetwood Mac</small></li>
+
+  <li id="song027" class="song">Green Grass and High Tides<small>The Outlaws</small></li>
+  <li id="song028" class="song">Hail to the King<small>Avenged Sevenfold</small></li>
+  <li id="song029" class="song">Heart of Glass<small>Blondie</small></li>
+  <li id="song030" class="song">Hey Man Nice Shot (Demo)<small>Filter</small></li>
+  <li id="song031" class="song">Hotel California<small>Eagles</small></li>
+  <li id="song032" class="song">I Miss the Misery<small>Halestorm</small></li>
+
+  <li id="song033" class="song">I Will Wait<small>Mumford And Sons</small></li>
+  <li id="song034" class="song">Imagine<small>John Lennon</small></li>
+  <li id="song035" class="song">It's My Life<small>Bon Jovi</small></li>
+  <li id="song036" class="song">Jump<small>Van Halen</small></li>
+  <li id="song037" class="song">Last Resort<small>Papa Roach</small></li>
+
+  <li id="song038" class="song">Lazy Eye<small>Silversun Pickups</small></li>
+  <li id="song039" class="song">Learn to Fly<small>Foo Fighters</small></li>
+  <li id="song040" class="song">Like a Stone<small>Audioslave</small></li>
+  <li id="song041" class="song">Master Exploder<small>Tenacious D</small></li>
+  <li id="song042" class="song">MidLife Crisis<small>Faith No More</small></li>
+
+  <li id="song043" class="song">My Curse<small>Killswitch Engage</small></li>
+  <li id="song044" class="song">Need You Tonight<small>INXS</small></li>
+  <li id="song045" class="song">Nine in the Afternoon<small>Panic! At The Disco</small></li>
+  <li id="song046" class="song">No One Like You<small>Scorpions</small></li>
+  <li id="song047" class="song">No Sleep Till Brooklyn<small>Beastie Boys</small></li>
+  <li id="song048" class="song">So What<small>P!nk</small></li>
+
+  <li id="song049" class="song">Painkiller<small>Judas Priest</small></li>
+  <li id="song050" class="song">Panic Attack<small>Dream Theater</small></li>
+  <li id="song051" class="song">Part II<small>Paramore</small></li>
+  <li id="song052" class="song">Pretty Handsome Awkward<small>The Used</small></li>
+  <li id="song053" class="song">Rainbow in the Dark<small>Dio</small></li>
+
+  <li id="song054" class="song">Freak on a Leash<small>Korn</small></li>
+  <li id="song055" class="song">Real World<small>Matchbox Twenty</small></li>
+  <li id="song056" class="song">Rehab<small>Amy Winehouse</small></li>
+  <li id="song057" class="song">Reptilia<small>The Strokes</small></li>
+  <li id="song058" class="song">Sacrifice<small>Elton John</small></li>
+ 
+  <li id="song059" class="song">Say It Ain't So<small>Weezer</small></li>
+  <li id="song060" class="song">Shadow Moses<small>Bring Me the Horizon</small></li>
+  <li id="song061" class="song">Toxic<small>Britney Spears</small></li>
+  <li id="song062" class="song">Spiders<small>System of a Down</small></li>
+  <li id="song063" class="song">The Hand That Feeds<small>Nine Inch Nails</small></li>
+
+  <li id="song064" class="song">The Kill<small>Thirty Seconds to Mars</small></li>
+  <li id="song065" class="song">The Look<small>Roxette</small></li>
+  <li id="song066" class="song">The Man Who Sold The World<small>David Bowie</small></li>
+  <li id="song067" class="song">The Unforgiven<small>Metallica</small></li>
+  <li id="song068" class="song">Use Somebody<small>Kings of Leon</small></li>
+
+  <li id="song069" class="song">War Pigs<small>Black Sabbath</small></li>
+  <li id="song070" class="song">Weight of the World<small>Evanescence</small></li>
+  <li id="song071" class="song">What Have You Done<small>Within Temptation</small></li>
+  <li id="song072" class="song">White Wedding (Part 1)<small>Billy Idol</small></li>
+  <li id="song073" class="song">Won't Get Fooled Again<small>The Who</small></li>
+  <li id="song074" class="song">Song 2<small>Blur</small></li>
+  <li id="song075" class="song">Dead!<small>My Chemical Romance</small></li>
+  <li id="song076" class="song">Testify<small>Rage Against the Machine</small></li>
+  <li id="song077" class="song">Man in the Box<small>Alice in Chains</small></li>
+  <li id="song078" class="song">Been Caught Stealing<small>Jane's Addiction</small></li>
+  <li id="song079" class="song">The Trooper<small>Iron Maiden</small></li>
+  <li id="song080" class="song">Some Might Say<small>Oasis</small></li>
+  <li id="song081" class="song">Mama, I'm Coming Home<small>Ozzy Osbourne</small></li>
+
+  <li id="song082" class="song">In the Shadows<small>The Rasmus</small></li>
+  <li id="song083" class="song">Wings of a Butterfly<small>HIM</small></li>
+  <li id="song084" class="song">I Am Electric<small>Heaven's Basement</small></li>
+  <li id="song085" class="song">Seven Nation Army<small>The White Stripes</small></li>
+  <li id="song086" class="song">Them and Us<small>Bad Religion</small></li>
+  <li id="song087" class="song">Farewell to the Fairground<small>White Lies</small></li>
+  <li id="song088" class="song">Clint Eastwood<small>Gorillaz</small></li>
+
+
+  
+  <li id="song089" class="song">Life is Beautiful<small>Sixx:A.M.</small></li>
+  <li id="song090" class="song">Our Truth<small>Lacuna Coil</small></li>
+  <li id="song091" class="song">Burn It to the Ground<small>Nickelback</small></li>
+  <li id="song092" class="song">Lonely Boy<small>The Black Keys</small></li>
+  <li id="song093" class="song">No More Sorrow<small>Linkin Park</small></li>
+  <li id="song094" class="song">Viva La Vida<small>Coldplay</small></li>
+  <li id="song095" class="song">Check Yes Juliet<small>We The Kings</small></li>
+
+  <li id="song096" class="song">Stillborn<small>Black Label Society</small></li>
+  <li id="song097" class="song">My Happy Ending<small>Avril Lavigne</small></li>
+  <li id="song098" class="song">Drops of Jupiter<small>Train</small></li>
+    
+
+<!--welcome to paradise/ skillet/ misirlou/stairway to heaven-->
+  
+
+  
+  
+
+  
+  
+</ul>
+
+<div class="bottomLine"></div>
+<!--down arrow: proxima musica / up arrow: voltar musica / 1: ver artista / 2: mudar ordenacao -->
+</body>
+</html>
